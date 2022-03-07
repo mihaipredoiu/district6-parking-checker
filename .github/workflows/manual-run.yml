@@ -1,9 +1,11 @@
 name: '👆 Manual check for parking slot'
+
 on:
   workflow_dispatch:
+
 jobs:
   test:
-    name: Manual check
+    name: 👆
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

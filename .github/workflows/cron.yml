@@ -1,0 +1,16 @@
+name: '🔁 Automatic check for parking slot'
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: 🔁
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Automatic check
+        uses: ./actions/runCheck
