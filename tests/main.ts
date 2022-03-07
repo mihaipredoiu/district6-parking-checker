@@ -6,7 +6,7 @@ fixture`Main parking check`.page(
   'https://parcari.adps6.ro/solicitare/solicitare-loc-de-parcare'
 )
 
-test('🚗 Iuliu Maniu parking lot', async (t) => {
+test('🚗 Iuliu Maniu parking', async (t) => {
   const ADDRESS = 'Bulevardul Iuliu Maniu'
   const BUILDING = 'bl. 34, nr. 144-146, Bulevardul Iuliu Maniu'
 
@@ -35,5 +35,8 @@ test('🚗 Iuliu Maniu parking lot', async (t) => {
     .click(Selector('li').withText(BUILDING))
 
   /** Checking availability of parking place */
-  t.expect(Selector('dvv').withText('nu există locuri de parcare disponibile'))
+  await t
+    .wait(3000)
+    .expect(Selector('li').withText('Locul de parcare').exists)
+    .notOk()
 })
