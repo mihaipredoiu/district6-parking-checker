@@ -1,0 +1,11 @@
+{
+  "name": "district6-parking-checker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mihai Predoiu",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "testcafe": "^1.18.4"
+  }
+}
