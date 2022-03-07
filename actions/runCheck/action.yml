@@ -1,0 +1,10 @@
+name: '🅿️ Parking check'
+description: 'Runs an automated check for free parking spot in Militari neighborhood'
+author: 'Mihai Predoiu'
+runs:
+  using: 'composite'
+  steps:
+    - name: 🏃 Run parking check
+      uses: DevExpress/testcafe-action@latest
+      with:
+        args: 'chromium:headless tests/ --selector-timeout=20000 -q successThreshold=1 --sf --skip-js-errors --hostname 127.0.0.1'
