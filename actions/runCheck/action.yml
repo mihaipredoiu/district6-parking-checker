@@ -1,5 +1,5 @@
 name: '🅿️ Parking check'
-description: 'Runs an automated check for free parking spot in Militari neighborhood'
+description: 'Runs an automated check for available parking place in Militari neighborhood'
 author: 'Mihai Predoiu'
 runs:
   using: 'composite'

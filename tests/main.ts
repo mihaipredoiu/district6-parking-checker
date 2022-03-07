@@ -34,6 +34,6 @@ test('🚗 Iuliu Maniu parking lot', async (t) => {
     )
     .click(Selector('li').withText(BUILDING))
 
-  /** Checking availability of parking spot */
+  /** Checking availability of parking place */
   t.expect(Selector('dvv').withText('nu există locuri de parcare disponibile'))
 })
