@@ -8,3 +8,9 @@ runs:
       uses: DevExpress/testcafe-action@latest
       with:
         args: 'chromium:headless tests/ --selector-timeout=20000 -q successThreshold=1 --sf --skip-js-errors --hostname 127.0.0.1'
+    - name: 🗯️ Teams notification
+      if: failure()
+      uses: codaintelligenceUS/actions/teamsNotification@master
+      with:
+        webhook: 'https://codaintelligence.webhook.office.com/webhookb2/eea5c2e9-86c4-4b88-bdb2-a4c50a126844@b6537763-7f58-4235-9db4-ac54c01ffb4b/IncomingWebhook/03a1044cc80c47ee8ad7f4d22b8c5d18/cf528a74-78bb-4cb1-901d-63667876c948'
+        title: '💥 A new parking place might have been found!'
